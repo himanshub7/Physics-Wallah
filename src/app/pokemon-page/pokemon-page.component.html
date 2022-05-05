@@ -1,0 +1,73 @@
+<button class="btn btn-outline-dark" (click)="back()">Back</button>
+
+<div class="">
+        <b>Name : </b>{{pokemonName}}
+    </div>
+    <div class="marginA">
+        <b>Abilities : </b>
+        <ul>
+            <li *ngFor="let ability of abilities">
+                {{ability}}
+                
+            </li>
+        </ul>
+    </div>
+    <div>
+        <b>Form : </b>
+        <ul>
+            <li *ngFor="let form of forms">
+                {{form}}
+                
+            </li>
+        </ul>
+    </div>
+    <div class="marginA">
+        <b>Weight : </b>{{weight}}
+    </div>
+    <div class="marginA">
+        <b>Moves : </b>
+        <ul class="row">
+            <li class="col-md-2" *ngFor="let move of moves">
+                {{move}}
+                
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <b>Stats : </b>
+        <ul class="row">
+            <li class="col-md-2" *ngFor="let stat of stats">
+                {{stat}}
+                
+            </li>
+        </ul>
+    </div>
+    <div>
+        <b>Sprites : </b>
+        <div class="row">
+            <div class="col-md-2" *ngFor="let sprite of sprites">
+                <!-- {{sprite}} -->
+                <div *ngIf="sprite">
+                    <img src={{sprite}} class="card-img-top" width="400" height="200">
+                </div>
+            </div>
+        
+            <!-- <img src={{sprite}} class="card-img-top" alt="..." width="400" height="200"> -->
+        </div>
+    </div>
+    <div>
+        <b>Types : </b>
+        <ul class="row">
+            <li class="col-md-2" *ngFor="let type of types">
+                {{type}}
+                
+            </li>
+        </ul>
+    </div>
+    <div class="marginA">
+        <b>Height : </b>{{height}}
+    </div>
+    <div class="marginA">
+        <b>Species : </b>{{species}}
+    </div>
