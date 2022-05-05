@@ -25,14 +25,9 @@ export class PokemonPageComponent implements OnInit {
   weight=0;
 
   constructor(private router:Router,private pokemonService: PokemonFetchService) {
-    // console.log(this.router.getCurrentNavigation()?.extras.state.example);
    }
 
   ngOnInit(): void {
-    // this.route.paramMap.subscribe((params:ParamMap) =>{
-    //   console.log(params);
-    // })
-    // console.log(this.index+"index");
     this.serviceCall();
 
   }

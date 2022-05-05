@@ -2,7 +2,6 @@ import { MatPaginator } from '@angular/material/paginator';
 import { Observable } from 'rxjs';
 import {  Input, OnInit, ViewChild } from '@angular/core';
 import { Component } from '@angular/core';
-// import { PokemonFetchService } from './pokemon-fetch.service';
 import {PokemonFetchService} from '../pokemon-fetch.service';
 import { Router } from '@angular/router';
 @Component({
@@ -22,7 +21,6 @@ export class MainComponentComponent implements OnInit {
   pikachu:any;
   lengthPage:number=0;
   public pages: number [] = []; 
-  // data={};
 
   constructor(private pokemonService: PokemonFetchService, private router:Router){
 
@@ -80,9 +78,9 @@ export class MainComponentComponent implements OnInit {
     this.showPokemon=show;
   }
 
-  navigate(index:Number){
+  navigate(index:Number,pokemon:never){
     this.showPokemon=false;
-    this.pikachu=index;
+    this.pikachu=this.pokemons.indexOf(pokemon);
   }
 
   onPageChange(){
@@ -90,11 +88,5 @@ export class MainComponentComponent implements OnInit {
 
   }
 
-  onClickPage(pageNumber: number) {  
-    if (pageNumber >= 1 && pageNumber <= this.pages.length) {  
-        // this.activePage = pageNumber;  
-        // this.onPageChange.emit(this.activePage);  
-    }  
-}
 
 }

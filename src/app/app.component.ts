@@ -9,34 +9,4 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // title = 'physicsWallah';
-  // pokemons=[];
-  // pokemonView:boolean=false;
-  // showPokemon:boolean=true;
-  // pikachu:string='';
-  // // data={};
-
-  // constructor(private pokemonService: PokemonFetchService, private router:Router){
-
-  // }
-
-  // ngOnInit(){
-  //   this.serviceCall();
-  // }
-
-  // serviceCall(){
-  //   this.pokemonService.getPokemon().subscribe((data) =>{
-  //     this.pokemons=data.results;
-  //     console.log(this.pokemons);
-  //   })
-
-  // }
-
-  // navigate(pokemon:string){
-  //   this.router.navigate(['/pokemon']);
-  //   this.showPokemon=false;
-  //   // this.pokemonView=true;
-  //   // this.pikachu=pokemon;
-  //   // console.log(pokemon);
-  // }
 }
